@@ -14,14 +14,20 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //TO FIX
-      pokeTeam: examplePokeTeam
+      // FIXED: JavaScript says you cannot attempt to map an array created via Array(6).
+      // therefore, we can just set the default array to mappable values that are falsy.
+      pokeTeam: [null, null, null, null, null, null]
     }
   }
 
   addPokemon(query, index) {
     getPokemon(query, ({ data }) => {
-      //TO FIX
+      // FIXED: create a shallow copy of the state, alter that copy, then use setState()
+      let copiedState = [...this.state.pokeTeam];
+      copiedState[index] = data;
+      this.setState({
+        pokeTeam: copiedState
+      })
     })
   }
 
