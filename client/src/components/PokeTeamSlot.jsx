@@ -9,7 +9,7 @@
 import React from "react";
 import AddPokeForm from "./AddPokeForm.jsx";
 
-const PokeTeamSlot = (props) => {
+const PokeTeamSlot = (props) => (
   (props.pokemon) ? (
     <div className="pokeTeamSlot">
       <div>Name: {props.pokemon.name}</div>
@@ -17,8 +17,9 @@ const PokeTeamSlot = (props) => {
       <img src={props.pokemon.sprites.front_default} alt="pokemon image" />
     </div>
   ) : (
-    <AddPokeForm addPokemon={props.addPokemon} index={props.key}/>
-  );
-};
+    // FIXED: continuing to pass down the index via a prop that is not 'key'
+    <AddPokeForm addPokemon={props.addPokemon} index={props.index}/>
+  )
+);
 
 export default PokeTeamSlot;
