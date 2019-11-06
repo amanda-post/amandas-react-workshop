@@ -120,4 +120,8 @@ Then,
 1) Write out functionality to update the state of **addPokeForm** as it changes with user input. *Hint: you may need the `onChange` listener!*
 2) Write out functionality that takes the updated state and calls the function to update **App**'s state with the new pokemon.
 
+### Step 10: Refactor `PokeTeamSlot.jsx` to show the **addPokeForm** when we want to add a pokemon
+
+* Replace our non-functional "Add a pokemon" `<button>` with our **addPokeForm** component, so that whenever there is an empty slot, we will have a search form available to add it.
+
 **Further steps to test your abilities are to come!**
