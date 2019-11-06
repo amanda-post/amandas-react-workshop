@@ -33,7 +33,7 @@ Created Nov 5, 2019
 * Should be used whenever you need to use state or [lifecycle methods](https://reactjs.org/docs/state-and-lifecycle.html).
 * Newly added to React, you can use state with functional components by creating a [**React hook**](https://reactjs.org/docs/hooks-overview.html). See the React hooks API [here](https://reactjs.org/docs/hooks-reference.html).
 
-----
+
 # INSTRUCTIONS
 
 ----
@@ -62,13 +62,14 @@ Then,
 
 * Render `App.jsx` to our `index.html`.
 
-
+----
 ### Step 2: Start writing out `App.jsx` component
 
 * Create **App**, as a *stateful/class* component.
 * Create a piece of state to store an array of pokemon objects, which will make up your team.
 * Render the **PokeTeam** component inside of the **App** component.
 
+----
 ### Step 3: Write out `PokeTeam.jsx` and `PokeTeamSlot.jsx`
 
 * Create both **PokeTeam** and **PokeTeamSlot** as *functional* components.
@@ -76,27 +77,32 @@ Then,
 
 > Leave this hard-coded for now; we will refactor momentarily.
 
+----
 ### Step 4: Check your work
 
 * Make sure you are able to see the hard-coded **PokeTeam** and **PokeTeamSlots** in your browser.
 
+----
 ### Step 5: Refactor `PokeTeam.jsx` and `PokeTeamSlot.jsx` for variable data
 
 *  **PokeTeam** should render one **PokeTeamSlot** for each pokemon in the array in **App**'s state
 
 * **PokeTeamSlot** components should be able to conditionally render the pokemon's `id`, `name`, and `img` based on what is passed down to it via `props`.
 
+----
 ### Step 6: Check your work
 
 * Set **App**'s state to a real team of Pokemon, by importing and using `examplePokeTeam.js`
 * You should see a rendered list of 6 pokemon, with their id, name, and image displayed.
 
+----
 ### Step 7: Refactor to handle`PokeTeamSlot.jsx` starting with an empty team
 
 * **PokeTeamSlot** should have [conditional rendering](https://reactjs.org/docs/conditional-rendering.html), based on whether there is a pokemon or not at that given index in the pokemon team array passed down from **App**.
   * If there is *no pokemon* in that slot, render a `<button>` that says `"Add a pokemon"`
   * Else, keep the normal rendering of the pokemon's `id`, `name`, and `img`.
 
+----
 ### Step 8: Create functionality to add/assign a pokemon to a slot
 
 * Write functionality that updates **App**'s state (pokemon array) using a query (either the pokemon's `name` or`id`), and the provided `getPokemon` function, found in the `lib/` folder of this repo.
@@ -104,6 +110,7 @@ Then,
   * Create a new component, called `addPokeForm.jsx`.
   * In this file, build out a *stateful / class* component with a form that allows the user to input a pokemon `name` or `id`, and updates **App**'s state using the functionality we just built out.
 
+----
 ### Step 9: Learn about forms and state with `addPokeForm.jsx`
 
 * Capture the information typed into the `<form>`, so that we can update **App**'s state with it.
